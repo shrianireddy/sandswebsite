@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&S Automation | Catalogue</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>S&S <span>Automation</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="catalogue.html" class="active">Catalogue</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="catalog">
+        <div class="container">
+            <h2>Product Catalogue</h2>
+            
+            <div class="catalog-filters">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="sensors">Sensors</button>
+                <button class="filter-btn" data-filter="controllers">Controllers</button>
+                <button class="filter-btn" data-filter="plc">PLC Systems</button>
+                <button class="filter-btn" data-filter="valves">Valves</button>
+                <button class="filter-btn" data-filter="meters">Meters</button>
+            </div>
+            
+            <div class="catalog-grid">
+                <div class="product-card" data-category="sensors">
+                    <div class="product-image">
+                        <img src="/api/placeholder/400/300" alt="Temperature Sensor">
+                    </div>
+                    <div class="product-details">
+                        <h3>High-Precision Temperature Sensor</h3>
+                        <p>RTD temperature sensor with high accuracy and stability for industrial applications.</p>
+                        <div class="product-meta">
+                            <span class="product-price">$129.99</span>
+                            <a href="enquiry.html" class="btn">Enquire</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="controllers">
+                    <div class="product-image">
+                        <img src="/api/placeholder/400/300" alt="PID Controller">
+                    </div>
+                    <div class="product-details">
+                        <h3>Advanced PID Controller</h3>
+                        <p>Microprocessor-based PID controller with auto-tuning and multiple input types.</p>
+                        <div class="product-meta">
+                            <span class="product-price">$349.99</span>
+                            <a href="enquiry.html" class="btn">Enquire</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="plc">
+                    <div class="product-image">
+                        <img src="/api/placeholder/400/300" alt="PLC System">
+                    </div>
+                    <div class="product-details">
+                        <h3>Modular PLC System</h3>
+                        <p>Expandable programmable logic controller with multiple I/O options and networking capabilities.</p>
+                        <div class="product-meta">
+                            <span class="product-price">$799.99</span>
+                            
+
+
+
+                                <a href="enquiry.html" class="btn">Enquire</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="valves">
+                    <div class="product-image">
+                        <img src="/api/placeholder/400/300" alt="Control Valve">
+                    </div>
+                    <div class="product-details">
+                        <h3>Precision Control Valve</h3>
+                        <p>High-performance control valve with accurate flow regulation for critical applications.</p>
+                        <div class="product-meta">
+                            <span class="product-price">$459.99</span>
+                            <a href="enquiry.html" class="btn">Enquire</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="meters">
+                    <div class="product-image">
+                        <img src="/api/placeholder/400/300" alt="Flow Meter">
+                    </div>
+                    <div class="product-details">
+                        <h3>Digital Flow Meter</h3>
+                        <p>Electromagnetic flow meter with digital display and high accuracy measurement.</p>
+                        <div class="product-meta">
+                            <span class="product-price">$549.99</span>
+                            <a href="enquiry.html" class="btn">Enquire</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="sensors">
+                    <div class="product-image">
+                        <img src="/api/placeholder/400/300" alt="Pressure Sensor">
+                    </div>
+                    <div class="product-details">
+                        <h3>Industrial Pressure Sensor</h3>
+                        <p>Robust pressure sensor with stainless steel construction for harsh environments.</p>
+                        <div class="product-meta">
+                            <span class="product-price">$179.99</span>
+                            <a href="enquiry.html" class="btn">Enquire</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="controllers">
+                    <div class="product-image">
+                        <img src="/api/placeholder/400/300" alt="Multi-Loop Controller">
+                    </div>
+                    <div class="product-details">
+                        <h3>Multi-Loop Process Controller</h3>
+                        <p>Four-channel process controller with advanced algorithms and data logging capabilities.</p>
+                        <div class="product-meta">
+                            <span class="product-price">$699.99</span>
+                            <a href="enquiry.html" class="btn">Enquire</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="plc">
+                    <div class="product-image">
+                        <img src="/api/placeholder/400/300" alt="Compact PLC">
+                    </div>
+                    <div class="product-details">
+                        <h3>Compact PLC System</h3>
+                        <p>Space-saving PLC solution with integrated I/O and Ethernet connectivity.</p>
+                        <div class="product-meta">
+                            <span class="product-price">$499.99</span>
+                            <a href="enquiry.html" class="btn">Enquire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-cta">
+                <p>Can't find what you're looking for?</p>
+                <a href="enquiry.html" class="btn">Submit Custom Enquiry</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>S&S <span>Automation</span></h2>
+                    <p>Leading provider of automation instruments and solutions.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="catalogue.html">Catalogue</a></li>
+                        <li><a href="enquiry.html">Enquiry</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Automation Road, Tech City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@sandsautomation.com</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 S&S Automation. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

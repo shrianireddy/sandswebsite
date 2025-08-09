@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&S Automation | Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional styles for service cards */
+        .services-cards {
+            padding: 60px 0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-image {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+        
+        .card-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-content h3 {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .card-content p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+        
+        .service-features-card {
+            margin-bottom: 20px;
+            padding-left: 0;
+        }
+        
+        .service-features-card li {
+            list-style: none;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-features-card i {
+            color: #4CAF50;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        
+        .card-content .btn {
+            align-self: flex-start;
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .card-content .btn:hover {
+            background-color: #1a2530;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>S&S <span>Automation</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="catalogue.html">Catalogue</a></li>
+                    <li><a href="enquiry.html">Enquiry</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Comprehensive automation solutions for diverse industrial needs</p>
+        </div>
+    </section>
+
+    <section class="services-cards">
+        <div class="container">
+            <div class="services-grid">
+                <!-- Automation Systems Card -->
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="/api/placeholder/600/400" alt="Automation Systems">
+                    </div>
+                    <div class="card-content">
+                        <h3>Automation Systems</h3>
+                        <p>We design, develop, and implement complete automation systems tailored to your specific industrial processes. Our solutions integrate seamlessly with existing infrastructure.</p>
+                        <ul class="service-features-card">
+                            <li><i class="fas fa-check"></i> PLC and DCS System Integration</li>
+                            <li><i class="fas fa-check"></i> SCADA Development</li>
+                            <li><i class="fas fa-check"></i> HMI Design and Programming</li>
+                            <li><i class="fas fa-check"></i> Process Control Systems</li>
+                        </ul>
+                        <a href="enquiry.html" class="btn">Request Info</a>
+                    </div>
+                </div>
+                
+                <!-- Instrument Supply Card -->
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="/api/placeholder/600/400" alt="Instrument Supply">
+                    </div>
+                    <div class="card-content">
+                        <h3>Instrument Supply</h3>
+                        <p>S&S Automation offers a comprehensive range of high-quality measurement and control instruments for various industrial applications from leading manufacturers.</p>
+                        <ul class="service-features-card">
+                            <li><i class="fas fa-check"></i> Pressure, Temperature, and Flow</li>
+                            <li><i class="fas fa-check"></i> Level Measurement Devices</li>
+                            <li><i class="fas fa-check"></i> Analytical Instruments</li>
+                            <li><i class="fas fa-check"></i> Control Valves and Actuators</li>
+                        </ul>
+                        <a href="catalogue.html" class="btn">Browse Catalogue</a>
+                    </div>
+                </div>
+                
+                <!-- Programming Services Card -->
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="/api/placeholder/600/400" alt="Programming Services">
+                    </div>
+                    <div class="card-content">
+                        <h3>Programming Services</h3>
+                        <p>Our expert programmers provide custom programming solutions for automation equipment and systems. We develop reliable, efficient code for maximum performance.</p>
+                        <ul class="service-features-card">
+                            <li><i class="fas fa-check"></i> PLC Programming</li>
+                            <li><i class="fas fa-check"></i> HMI/SCADA Programming</li>
+                            <li><i class="fas fa-check"></i> Custom Software Development</li>
+                            <li><i class="fas fa-check"></i> System Integration Programming</li>
+                        </ul>
+                        <a href="enquiry.html" class="btn">Request Services</a>
+                    </div>
+                </div>
+                
+                <!-- Technical Support Card -->
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="/api/placeholder/600/400" alt="Technical Support">
+                    </div>
+                    <div class="card-content">
+                        <h3>Technical Support & Maintenance</h3>
+                        <p>We provide comprehensive technical support and maintenance services to ensure your automation systems operate at peak performance with minimal downtime.</p>
+                        <ul class="service-features-card">
+                            <li><i class="fas fa-check"></i> 24/7 Technical Support</li>
+                            <li><i class="fas fa-check"></i> Preventive Maintenance</li>
+                            <li><i class="fas fa-check"></i> Troubleshooting and Repair</li>
+                            <li><i class="fas fa-check"></i> System Upgrades</li>
+                        </ul>
+                        <a href="contact.html" class="btn">Contact Support</a>
+                    </div>
+                </div>
+                
+                <!-- Consulting Services Card -->
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="/api/placeholder/600/400" alt="Consulting Services">
+                    </div>
+                    <div class="card-content">
+                        <h3>Consulting Services</h3>
+                        <p>Our team of automation experts provides consulting services to help you optimize your industrial processes and improve efficiency and productivity.</p>
+                        <ul class="service-features-card">
+                            <li><i class="fas fa-check"></i> Process Optimization</li>
+                            <li><i class="fas fa-check"></i> System Assessment</li>
+                            <li><i class="fas fa-check"></i> Feasibility Studies</li>
+                            <li><i class="fas fa-check"></i> ROI Analysis</li>
+                        </ul>
+                        <a href="enquiry.html" class="btn">Request Consultation</a>
+                    </div>
+                </div>
+                
+                <!-- Training Programs Card -->
+                <div class="service-card">
+                    <div class="card-image">
+                        <img src="/api/placeholder/600/400" alt="Training Programs">
+                    </div>
+                    <div class="card-content">
+                        <h3>Training Programs</h3>
+                        <p>S&S Automation offers comprehensive training programs to help your team master the operation and maintenance of automation systems.</p>
+                        <ul class="service-features-card">
+                            <li><i class="fas fa-check"></i> Equipment Operation</li>
+                            <li><i class="fas fa-check"></i> Maintenance Best Practices</li>
+                            <li><i class="fas fa-check"></i> Troubleshooting Techniques</li>
+                            <li><i class="fas fa-check"></i> Programming Instruction</li>
+                        </ul>
+                        <a href="contact.html" class="btn">Schedule Training</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Enhance Your Automation Infrastructure?</h2>
+                <p>Let our experts help you find the perfect solution for your industrial needs.</p>
+                <a href="enquiry.html" class="btn btn-white">Make an Enquiry</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>S&S <span>Automation</span></h2>
+                    <p>Leading provider of automation instruments and solutions.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="catalogue.html">Catalogue</a></li>
+                        <li><a href="enquiry.html">Enquiry</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Automation Road, Tech City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@sandsautomation.com</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 S&S Automation. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

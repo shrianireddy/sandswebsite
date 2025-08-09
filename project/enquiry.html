@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&S Automation | Enquiry</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>S&S <span>Automation</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="catalogue.html">Catalogue</a></li>
+                    <li><a href="enquiry.html" class="active">Enquiry</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="enquiry">
+        <div class="container">
+            <h2>Product Enquiry</h2>
+            <div class="enquiry-intro">
+                <p>Please fill out the form below with your product inquiry details. Our team will get back to you within 24 hours with more information.</p>
+            </div>
+            
+            <div class="enquiry-form">
+                <!-- https://docs.google.com/forms/d/e//viewform?usp=preview -->
+               <form id="enquiryForm" 
+      method="POST" 
+      target="_blank">
+    <div class="form-row">
+        <div class="form-group">
+            <label for="fullName">Full Name *</label>
+            <input type="text" id="fullName" name="entry.972888119" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="companyName">Company Name *</label>
+            <input type="text" id="companyName" name="entry.1706520724" class="form-control" required>
+        </div>
+    </div>
+    
+    <div class="form-row">
+        <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="entry.1702461683" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="entry.653672321" class="form-control" required>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label for="productCategory">Product Category</label>
+        <select id="productCategory" name="entry.774633051" class="form-control">
+            <option value="">Select a category</option>
+            <option value="Sensors">Sensors</option>
+            <option value="Controllers">Controllers</option>
+            <option value="PLC Systems">PLC Systems</option>
+            <option value="Valves">Valves</option>
+            <option value="Meters">Meters</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+        <label for="productName">Product Name/Model (If Known)</label>
+        <input type="text" id="productName" name="entry.456686742" class="form-control">
+    </div>
+    
+    <div class="form-group">
+        <label for="quantity">Estimated Quantity</label>
+        <input type="number" id="quantity" name="entry.616676591" class="form-control" min="1">
+    </div>
+    
+    <div class="form-group">
+        <label for="message">Enquiry Details *</label>
+        <textarea id="message" name="entry.1101204555" class="form-control" required></textarea>
+    </div>
+    
+    <div class="form-submit">
+        <button type="submit" class="btn">Submit Enquiry</button>
+    </div>
+</form>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>S&S <span>Automation</span></h2>
+                    <p>Leading provider of automation instruments and solutions.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="catalogue.html">Catalogue</a></li>
+                        <li><a href="enquiry.html">Enquiry</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Automation Road, Tech City</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@sandsautomation.com</p>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 S&S Automation. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
