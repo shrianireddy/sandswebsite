@@ -1,11 +1,10 @@
 /* Base Styles */
 :root {
-    --primary-red: #e63946;
-    --primary-blue: #1d3557;
-    --light-blue: #457b9d;
-    --gray-light: #f1faee;
-    --white: #ffffff;
-    --dark: #333333;
+    --brand-blue: #2850E2;
+    --brand-red: #F93943;
+    --brand-orange: #F48815;
+    --brand-dark: #1C1D21;
+    --brand-white: #FDFFFC;
     --transition: all 0.3s ease;
 }
 
@@ -18,8 +17,8 @@
 body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    color: var(--dark);
-    background-color: var(--white);
+    color: var(--brand-dark);
+    background-color: var(--brand-white);
 }
 
 .container {
@@ -46,8 +45,8 @@ img {
 
 /* Header Styles */
 header {
-    background-color: var(--white);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--brand-blue);
+    box-shadow: 0 2px 10px rgba(40, 80, 226, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -63,11 +62,11 @@ header .container {
 .logo h1 {
     font-size: 24px;
     font-weight: 700;
-    color: var(--primary-red);
+    color: var(--brand-red);
 }
 
 .logo span {
-    color: var(--primary-blue);
+    color: var(--brand-white);
 }
 
 nav ul {
@@ -80,6 +79,7 @@ nav ul li a {
     transition: var(--transition);
     padding: 10px 0;
     position: relative;
+    color: var(--brand-white);
 }
 
 nav ul li a:after {
@@ -89,7 +89,7 @@ nav ul li a:after {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--primary-red);
+    background-color: var(--brand-orange);
     transition: var(--transition);
 }
 
@@ -107,7 +107,7 @@ nav ul li a.active:after {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: var(--primary-blue);
+    background-color: var(--brand-orange);
     margin: 5px 0;
     transition: var(--transition);
 }
@@ -116,6 +116,8 @@ nav ul li a.active:after {
 .hero {
     position: relative;
     overflow: hidden;
+    background: linear-gradient(120deg, var(--brand-blue) 60%, var(--brand-orange) 100%);
+    color: var(--brand-white);
 }
 
 .carousel-container {
@@ -149,22 +151,23 @@ nav ul li a.active:after {
     left: 0;
     width: 100%;
     padding: 30px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: var(--white);
+    background-color: rgba(28, 29, 33, 0.7);
+    color: var(--brand-white);
     text-align: center;
 }
 
 .carousel-caption h2 {
     font-size: 32px;
     margin-bottom: 10px;
+    color: var(--brand-red);
 }
 
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: var(--white);
+    background-color: var(--brand-red);
+    color: var(--brand-white);
     border: none;
     width: 40px;
     height: 40px;
@@ -175,7 +178,7 @@ nav ul li a.active:after {
 }
 
 .carousel-btn:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--brand-orange);
 }
 
 .prev {
@@ -200,7 +203,7 @@ nav ul li a.active:after {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--white);
+    background-color: var(--brand-white);
     cursor: pointer;
     opacity: 0.5;
     transition: var(--transition);
@@ -208,19 +211,20 @@ nav ul li a.active:after {
 
 .dot.active {
     opacity: 1;
+    background-color: var(--brand-red);
 }
 
 /* About Section */
 .about {
     padding: 80px 0;
-    background-color: var(--gray-light);
+    background-color: var(--brand-white);
 }
 
 .about h2 {
     text-align: center;
     font-size: 32px;
     margin-bottom: 40px;
-    color: var(--primary-blue);
+    color: var(--brand-blue);
 }
 
 .about-content {
@@ -241,48 +245,93 @@ nav ul li a.active:after {
     flex: 1;
 }
 
-/* Services Overview */
-.services-overview {
-    padding: 80px 0;
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(40, 80, 226, 0.1);
 }
 
-.services-overview h2 {
+/* Services Overview Section */
+.iservices-overview {
+    padding: 60px 0;
+    background: var(--brand-blue);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.iservices-overview h2 {
     text-align: center;
-    font-size: 32px;
+    font-size: 2rem;
+    color: var(--brand-white);
     margin-bottom: 40px;
-    color: var(--primary-blue);
+    font-weight: 700;
 }
 
-.services-grid {
+.iservices-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
 }
 
-.service-card {
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.iservice-card {
+    background: var(--brand-white);
+    padding: 30px 20px;
+    border-radius: 12px;
     text-align: center;
-    transition: var(--transition);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-.service-icon {
-    font-size: 40px;
-    color: var(--primary-red);
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
+.iservice-icon {
+    font-size: 2.5rem;
+    color:var(--brand-orange);
     margin-bottom: 15px;
-    color: var(--primary-blue);
+    transition: color 0.3s ease-in-out;
 }
+
+.iservice-card h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--brand-dark);
+    margin-bottom: 10px;
+}
+
+.iservice-card p {
+    font-size: 0.95rem;
+    color: var(--brand-dark);
+    line-height: 1.5;
+}
+
+/* Hover Effect */
+.iservice-card:hover {
+    background: var(--brand-red);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.iservice-card:hover h3,
+.iservice-card:hover p {
+    color: #fff;
+}
+.iservice-card:hover .iservice-icon{
+    color: var(--brand-blue);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .iservices-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .iservices-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 .services-cta {
     text-align: center;
@@ -291,8 +340,8 @@ nav ul li a.active:after {
 
 /* CTA Section */
 .cta {
-    background-color: var(--primary-blue);
-    color: var(--white);
+    background-color: var(--brand-orange);
+    color: var(--brand-dark);
     padding: 80px 0;
     text-align: center;
 }
@@ -311,8 +360,8 @@ nav ul li a.active:after {
 
 /* Footer */
 footer {
-    background-color: var(--primary-blue);
-    color: var(--white);
+    background-color: var(--brand-dark);
+    color: var(--brand-white);
     padding: 60px 0 20px;
 }
 
@@ -326,11 +375,11 @@ footer {
 .footer-logo h2 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: var(--primary-red);
+    color: var(--brand-red);
 }
 
 .footer-logo span {
-    color: var(--white);
+    color: var(--brand-blue);
 }
 
 .footer-links h3,
@@ -338,6 +387,7 @@ footer {
 .footer-social h3 {
     margin-bottom: 20px;
     font-size: 18px;
+    color: var(--brand-red);
 }
 
 .footer-links ul li {
@@ -346,10 +396,11 @@ footer {
 
 .footer-links ul li a {
     transition: var(--transition);
+    color: var(--brand-white);
 }
 
 .footer-links ul li a:hover {
-    color: var(--primary-red);
+    color: var(--brand-orange);
 }
 
 .footer-contact p {
@@ -371,27 +422,29 @@ footer {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(253, 255, 252, 0.1);
     transition: var(--transition);
+    color: var(--brand-white);
 }
 
 .social-icons a:hover {
-    background-color: var(--primary-red);
+    background-color: var(--brand-orange);
+    color: var(--brand-dark);
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(253, 255, 252, 0.1);
 }
 
 /* Button Styles */
 .btn {
     display: inline-block;
     padding: 12px 30px;
-    background-color: var(--primary-red);
-    color: var(--white);
-    border-radius: 5px;
+    background-color: var(--brand-red);
+    color: var(--brand-white);
+    border-radius: 2rem;
     font-weight: 600;
     transition: var(--transition);
     border: none;
@@ -399,29 +452,33 @@ footer {
 }
 
 .btn:hover {
-    background-color: #d12836;
+    background-color: var(--brand-orange);
+    color: var(--brand-dark);
     transform: translateY(-3px);
 }
 
 .btn-white {
-    background-color: var(--white);
-    color: var(--primary-blue);
+    background-color: var(--brand-white);
+    color: var(--brand-blue);
+    border: 2px solid var(--brand-blue);
 }
 
 .btn-white:hover {
-    background-color: var(--gray-light);
+    background-color: var(--brand-blue);
+    color: var(--brand-white);
 }
 
 /* Catalog Page Styles */
 .catalog {
     padding: 80px 0;
+    background: var(--brand-white);
 }
 
 .catalog h2 {
     text-align: center;
     font-size: 32px;
     margin-bottom: 40px;
-    color: var(--primary-blue);
+    color: var(--brand-blue);
 }
 
 .catalog-filters {
@@ -434,19 +491,22 @@ footer {
 
 .filter-btn {
     padding: 8px 16px;
-    background-color: var(--gray-light);
+    background-color: var(--brand-white);
     border: none;
     border-radius: 30px;
     cursor: pointer;
     transition: var(--transition);
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+    color: var(--brand-blue);
+    border: 1px solid var(--brand-blue);
 }
 
 .filter-btn.active,
 .filter-btn:hover {
-    background-color: var(--primary-red);
-    color: var(--white);
+    background-color: var(--brand-red);
+    color: var(--brand-white);
+    border-color: var(--brand-red);
 }
 
 .catalog-grid {
@@ -456,15 +516,16 @@ footer {
 }
 
 .product-card {
-    border-radius: 5px;
+    border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(40, 80, 226, 0.1);
     transition: var(--transition);
+    background: var(--brand-white);
 }
 
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 20px rgba(244, 136, 21, 0.15);
 }
 
 .product-image {
@@ -489,12 +550,12 @@ footer {
 
 .product-details h3 {
     margin-bottom: 10px;
-    color: var(--primary-blue);
+    color: var(--brand-blue);
 }
 
 .product-details p {
     margin-bottom: 15px;
-    color: var(--dark);
+    color: var(--brand-dark);
 }
 
 .product-meta {
@@ -506,7 +567,7 @@ footer {
 
 .product-price {
     font-weight: 700;
-    color: var(--primary-red);
+    color: var(--brand-red);
 }
 
 .product-cta {
@@ -517,13 +578,14 @@ footer {
 /* Contact Page Styles */
 .contact {
     padding: 80px 0;
+    background: var(--brand-white);
 }
 
 .contact h2 {
     text-align: center;
     font-size: 32px;
     margin-bottom: 40px;
-    color: var(--primary-blue);
+    color: var(--brand-blue);
 }
 
 .contact-content {
@@ -533,15 +595,16 @@ footer {
 }
 
 .contact-info {
-    background-color: var(--primary-blue);
-    color: var(--white);
+    background-color: var(--brand-blue);
+    color: var(--brand-white);
     padding: 30px;
-    border-radius: 5px;
+    border-radius: 1rem;
 }
 
 .contact-info h3 {
     margin-bottom: 20px;
     font-size: 24px;
+    color: var(--brand-orange);
 }
 
 .contact-detail {
@@ -553,7 +616,7 @@ footer {
 
 .contact-icon {
     font-size: 20px;
-    color: var(--primary-red);
+    color: var(--brand-red);
 }
 
 .contact-map {
@@ -572,9 +635,9 @@ footer {
 /* Form Styles */
 .contact-form {
     padding: 30px;
-    background-color: var(--white);
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: var(--brand-white);
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(40, 80, 226, 0.1);
 }
 
 .form-group {
@@ -591,14 +654,14 @@ footer {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 1rem;
     font-family: 'Montserrat', sans-serif;
     transition: var(--transition);
 }
 
 .form-control:focus {
     outline: none;
-    border-color: var(--primary-blue);
+    border-color: var(--brand-blue);
 }
 
 textarea.form-control {
@@ -613,14 +676,14 @@ textarea.form-control {
 /* Enquiry Page Styles */
 .enquiry {
     padding: 80px 0;
-    background-color: var(--gray-light);
+    background-color: var(--brand-white);
 }
 
 .enquiry h2 {
     text-align: center;
     font-size: 32px;
     margin-bottom: 20px;
-    color: var(--primary-blue);
+    color: var(--brand-blue);
 }
 
 .enquiry-intro {
@@ -633,15 +696,134 @@ textarea.form-control {
     max-width: 800px;
     margin: 0 auto;
     padding: 30px;
-    background-color: var(--white);
-    border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: var(--brand-white);
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(40, 80, 226, 0.1);
 }
 
 .form-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+}
+
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background-color:var(--brand-white);
+    border-radius: 10px;
+    box-shadow:  0 5px 15px var(--brand-dark , 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px var(--brand-blue, 0.2);
+    background-color: var(--brand-blue);
+    color: var(--brand-white);
+}
+
+.card-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    color: var(--brand-red);
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center; /* Centered headings */
+}
+
+.card-content p {
+    /* color:  var(--brand-dark); */
+    margin-bottom: 20px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+
+.service-features-card {
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+.service-features-card li {
+    list-style: none;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.service-features-card i {
+    color: #4CAF50;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.card-content .btn {
+    align-self: center; /* Center in card */
+    padding: 10px 25px;
+    background-color: var(--brand-orange); /* Blue */
+    color: var(--brand-white);
+    text-decoration: none;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.card-content .btn:hover {
+    background-color: var(--brand-orange); /* Darker blue on hover */
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    padding: 20px 20px;
+    background-color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Responsive Styles */
@@ -662,10 +844,10 @@ textarea.form-control {
         top: 70px;
         left: 0;
         right: 0;
-        background-color: var(--white);
+        background-color: var(--brand-blue);
         flex-direction: column;
         padding: 20px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 15px rgba(40, 80, 226, 0.1);
     }
     
     nav ul.active {
@@ -709,11 +891,11 @@ textarea.form-control {
 }
 
 .error {
-    border: 1px solid #ff3860 !important;
+    border: 1px solid var(--brand-red) !important;
 }
 
 .error-message {
-    color: #ff3860;
+    color: var(--brand-red);
     font-size: 0.85em;
     margin-top: 4px;
 }
@@ -722,7 +904,7 @@ textarea.form-control {
     text-align: center;
     padding: 2rem;
     margin: 2rem 0;
-    background-color: #f8f9fa;
+    background-color: var(--brand-white);
     border-radius: 8px;
 }
 
